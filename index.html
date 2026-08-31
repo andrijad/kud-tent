@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КУД „ТЕНТ" Обреновац — Насловна</title>
+<meta name="description" content="Културно-уметничко друштво Термоелектране Никола Тесла из Обреновца. Народна игра, песма и традиција од 1979.">
+<link rel="stylesheet" href="style.css">
+<style>
+/* --- HERO (само насловна) --------------------------------- */
+.hero {
+  background: var(--cream);
+  padding: 72px 0 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--ochre-light), transparent);
+}
+.hero__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 16px;
+  display: block;
+}
+.hero h1 { max-width: 680px; margin: 0 auto 16px; }
+.hero__sub {
+  font-size: 17px;
+  color: var(--stone);
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.hero__img-placeholder {
+  width: 100%;
+  max-width: 900px;
+  height: 320px;
+  background: var(--cream-dark);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--stone-light);
+  margin: 36px auto 0;
+  overflow: hidden;
+}
+.hero__img-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 10px; }
+
+/* --- CTA BLOKOVI ----------------------------------------- */
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: -32px;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 600px) { .cta-grid { grid-template-columns: 1fr; margin-top: 0; } }
+
+.cta-card {
+  background: var(--warm-white);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 10px;
+  padding: 28px 28px 24px;
+}
+.cta-card--rust { border-top: 3px solid var(--rust); }
+.cta-card--ochre { border-top: 3px solid var(--ochre); }
+.cta-card h3 { font-size: 19px; margin-bottom: 10px; }
+.cta-card p { font-size: 14px; color: var(--stone); margin-bottom: 18px; }
+
+/* --- O KUD-U BLOK ---------------------------------------- */
+.o-kudu {
+  background: var(--warm-white);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 10px;
+  padding: 32px 36px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 680px) { .o-kudu { flex-direction: column; padding: 24px; } }
+.o-kudu__text { flex: 1; }
+.o-kudu__text h2 { font-size: 20px; margin-bottom: 10px; }
+.o-kudu__text p { font-size: 15px; color: var(--stone); }
+.o-kudu__stat {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 16px 24px;
+  background: var(--cream);
+  border-radius: 8px;
+  border: 0.5px solid var(--cream-dark);
+}
+.o-kudu__stat .big { font-family: Georgia, serif; font-size: 36px; font-weight: 600; color: var(--rust); line-height: 1; }
+.o-kudu__stat .lbl { font-size: 12px; color: var(--stone-light); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__name">КУД „ТЕНТ"</span>
+      <span class="site-logo__sub">Обреновац · од 1979.</span>
+    </a>
+    <button class="nav-toggle" aria-label="Meni" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="index.html" class="active">Насловна</a></li>
+        <li><a href="o-nama.html">О нама</a></li>
+        <li><a href="sekcije.html">Секције</a></li>
+        <li><a href="upis.html">Упис</a></li>
+        <li><a href="kontakt.html">Контакт</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">КУД „ТЕНТ" Обреновац · од 1979.</span>
+      <h1>Традиција која се игра,<br>пева и живи.</h1>
+      <p class="hero__sub">Место где деца стичу прве кораке, прве пријатеље и прве наступе.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="upis.html" class="btn btn--primary">Упиши се</a>
+        <a href="kontakt.html" class="btn btn--secondary">Контактирај нас</a>
+      </div>
+      <div class="hero__img-placeholder">
+        [ Херо фотографија — сценски наступ или групна слика у ношњи · 1440×640 px ]
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA KARTICE -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-card cta-card--rust">
+          <h3>Упис нових чланова</h3>
+          <p>Секције за сва узраста — деца, омладина, одрасли. Претходно искуство није потребно за почетне групе.</p>
+          <a href="upis.html" class="btn btn--primary btn--sm">Упиши се →</a>
+        </div>
+        <div class="cta-card cta-card--ochre">
+          <h3>Контакт и информације</h3>
+          <p>За сва питања о пробама, наступима и раду друштва. Пишите нам или дођите на адресу.</p>
+          <a href="kontakt.html" class="btn btn--ghost btn--sm">Контактирај нас →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament container"></div>
+
+  <!-- O KUD-U -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="o-kudu">
+        <div class="o-kudu__text">
+          <span class="section-label">О нама</span>
+          <h2>КУД „ТЕНТ" Обреновац</h2>
+          <p>Добро дошли на страницу Културно-уметничког друштва „Термоелектране Никола Тесла" из Обреновца. Кроз игру, песму, музику и народну ношњу чувамо традицију и представљамо је на сцени у земљи и иностранству.</p>
+          <a href="o-nama.html" class="btn btn--ghost btn--sm mt-2">О нама →</a>
+        </div>
+        <div class="o-kudu__stat">
+          <div class="big">1979.</div>
+          <div class="lbl">година оснивања</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament container"></div>
+
+  <!-- SEKCIJE -->
+  <section class="section--tight section--warm">
+    <div class="container">
+      <span class="section-label">Наше секције</span>
+      <h2 style="margin-bottom:24px;">Пет секција, једна заједница</h2>
+      <div class="grid-5">
+
+        <a href="sekcije.html#narodni-orkestar" class="sekcija-card" style="text-decoration:none;">
+          <div class="sekcija-card__img">[ 220×160 px ]</div>
+          <div class="sekcija-card__body">
+            <div class="sekcija-card__name">Народни оркестар</div>
+            <span class="btn btn--primary btn--sm">Сазнај →</span>
+          </div>
+        </a>
+
+        <a href="sekcije.html#skola-folklora" class="sekcija-card" style="text-decoration:none;">
+          <div class="sekcija-card__img">[ 220×160 px ]</div>
+          <div class="sekcija-card__body">
+            <div class="sekcija-card__name">Школа фолклора</div>
+            <span class="btn btn--primary btn--sm">Сазнај →</span>
+          </div>
+        </a>
+
+        <a href="sekcije.html#izvodjacki-ansambl" class="sekcija-card" style="text-decoration:none;">
+          <div class="sekcija-card__img">[ 220×160 px ]</div>
+          <div class="sekcija-card__body">
+            <div class="sekcija-card__name">Извођачки ансамбл</div>
+            <span class="btn btn--primary btn--sm">Сазнај →</span>
+          </div>
+        </a>
+
+        <a href="sekcije.html#veterani" class="sekcija-card" style="text-decoration:none;">
+          <div class="sekcija-card__img">[ 220×160 px ]</div>
+          <div class="sekcija-card__body">
+            <div class="sekcija-card__name">Ветерани</div>
+            <span class="btn btn--primary btn--sm">Сазнај →</span>
+          </div>
+        </a>
+
+        <a href="sekcije.html#rekreativna-grupa" class="sekcija-card" style="text-decoration:none;">
+          <div class="sekcija-card__img">[ 220×160 px ]</div>
+          <div class="sekcija-card__body">
+            <div class="sekcija-card__name">Рекреативна група</div>
+            <span class="btn btn--primary btn--sm">Сазнај →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament container"></div>
+
+  <!-- KONTAKT BLOK -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="grid-2" style="align-items:start;">
+        <div class="kontakt-info">
+          <h3>Контакт</h3>
+          <div class="kontakt-row">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21c-4.418-4.418-7-7.582-7-10a7 7 0 0114 0c0 2.418-2.582 5.582-7 10z"/><circle cx="12" cy="11" r="2"/></svg>
+            <div><strong>Адреса</strong>Vojvode Mišića br. 226, 11500 Обреновац</div>
+          </div>
+          <div class="kontakt-row">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <div><strong>Имejл</strong><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></div>
+          </div>
+          <div class="kontakt-row">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 12 19.79 19.79 0 011 3.18 2 2 0 013 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <div><strong>Телефон</strong><a href="tel:+381612850712">+381 61 285 0712</a></div>
+          </div>
+          <a href="kontakt.html" class="btn btn--secondary btn--sm mt-2">Контактирај нас →</a>
+        </div>
+        <div>
+          <span class="section-label">Упис</span>
+          <h2 style="margin-bottom:12px;">Придружите се</h2>
+          <p style="color:var(--stone);font-size:15px;margin-bottom:20px;">Упис нових чланова је отворен. Позивамо децу, младе и одрасле да постану dio друштва које чува и негује народну традицију.</p>
+          <a href="upis.html" class="btn btn--primary">Упиши се →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__logo">КУД „ТЕНТ" Обреновац</div>
+        <p>Културно-уметничко друштво<br>„Термоелектране Никола Тесла"<br>Основано 27. новембра 1979.</p>
+      </div>
+      <div>
+        <h4>Навигација</h4>
+        <ul>
+          <li><a href="index.html">Насловна</a></li>
+          <li><a href="o-nama.html">О нама</a></li>
+          <li><a href="sekcije.html">Секције</a></li>
+          <li><a href="upis.html">Упис</a></li>
+          <li><a href="kontakt.html">Контакт</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <ul>
+          <li>Vojvode Mišića br. 226</li>
+          <li>11500 Обреновац</li>
+          <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
+          <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© КУД „ТЕНТ" Обреновац</span>
+      <div style="display:flex;gap:16px;">
+        <a href="uslovi.html">Услови коришћења</a>
+        <a href="privatnost.html">Политика приватности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <span>Овај сајт користи колачиће (Google Maps embed, Cloudflare Pages). <a href="privatnost.html">Политика приватности</a>.</span>
+  <button class="btn btn--ghost btn--sm" onclick="document.getElementById('cookieBanner').classList.add('hidden');localStorage.setItem('cookies_ok','1')">Прихватам</button>
+</div>
+<script>if(localStorage.getItem('cookies_ok'))document.getElementById('cookieBanner').classList.add('hidden');</script>
+</body>
+</html>

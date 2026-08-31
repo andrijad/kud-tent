@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Упис — КУД „ТЕНТ" Обреновац</title>
+<meta name="description" content="Упис нових чланова у КУД ТЕНТ. Секције за децу, омладину и одрасле. Пошаљите пријаву онлајн.">
+<link rel="stylesheet" href="style.css">
+<style>
+.upis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 768px) { .upis-grid { grid-template-columns: 1fr; } }
+
+.table-wrap {
+  background: var(--warm-white);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table-wrap h3 { padding: 18px 20px 12px; font-size: 17px; border-bottom: 0.5px solid var(--cream-dark); }
+
+.termini-wrap {
+  background: var(--warm-white);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.termini-wrap h3 { padding: 18px 20px 12px; font-size: 17px; border-bottom: 0.5px solid var(--cream-dark); }
+
+.forma-wrap {
+  background: var(--warm-white);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 10px;
+  padding: 28px 28px 24px;
+}
+.forma-wrap h3 { margin-bottom: 6px; }
+.forma-wrap .sub { font-size: 14px; color: var(--stone); margin-bottom: 20px; }
+.forma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+@media (max-width: 480px) { .forma-grid { grid-template-columns: 1fr; } }
+.full { grid-column: 1 / -1; }
+
+.info-box {
+  background: var(--forest-pale);
+  border: 0.5px solid var(--forest);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--forest);
+  line-height: 1.65;
+}
+.info-box strong { color: var(--forest); }
+
+.upis-table td.group-label { font-weight: 600; color: var(--charcoal); }
+
+.warn-note {
+  font-size: 12px;
+  color: var(--ochre);
+  font-style: italic;
+  padding: 8px 12px;
+  background: var(--ochre-pale);
+  border-top: 0.5px solid var(--cream-dark);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__name">КУД „ТЕНТ"</span>
+      <span class="site-logo__sub">Обреновац · од 1979.</span>
+    </a>
+    <button class="nav-toggle" aria-label="Meni" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="index.html">Насловна</a></li>
+        <li><a href="o-nama.html">О нама</a></li>
+        <li><a href="sekcije.html">Секције</a></li>
+        <li><a href="upis.html" class="active">Упис</a></li>
+        <li><a href="kontakt.html">Контакт</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="display:block;margin-bottom:8px;">КУД „ТЕНТ" Обреновац</span>
+      <h1>Упис нових чланова</h1>
+      <p style="color:var(--stone);font-size:16px;max-width:540px;margin:10px auto 0;">Позивамо децу, младе и одрасле да нам се придруже. Претходно искуство <strong>није потребно</strong> за почетне групе.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="upis-grid">
+
+        <!-- LEVO: tabele -->
+        <div>
+          <div class="table-wrap">
+            <h3>Групе за упис</h3>
+            <table class="upis-table">
+              <thead>
+                <tr>
+                  <th>Група / секција</th>
+                  <th>Намена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="group-label">Школа фолклора – млађа</td><td>Деца предшколског узраста</td></tr>
+                <tr><td class="group-label">Школа фолклора – старија</td><td>Деца школског узраста</td></tr>
+                <tr><td class="group-label">Припремни дечији ансамбл</td><td>Деца која прелазе из почетних група</td></tr>
+                <tr><td class="group-label">Дечији ансамбл</td><td>Деца са основним искуством</td></tr>
+                <tr><td class="group-label">Омладински ансамбл</td><td>Млади — наставак рада</td></tr>
+                <tr><td class="group-label">Извођачки ансамбл</td><td>Кандидати са играчким искуством</td></tr>
+                <tr><td class="group-label">Народни оркестар</td><td>Музичари</td></tr>
+                <tr><td class="group-label">Ветерани</td><td>Искуснији чланови и бивши играчи</td></tr>
+                <tr><td class="group-label">Рекреативна група</td><td>Одрасли — рекреативно, без искуства</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="termini-wrap">
+            <h3>Термини проба</h3>
+            <table class="upis-table">
+              <thead>
+                <tr><th>Дан</th><th>Група</th><th>Вр.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Понедељак</td><td>Омладински ансамбл</td><td>19–20</td></tr>
+                <tr><td>Уторак</td><td>Старија група деце</td><td>18–19</td></tr>
+                <tr><td>Уторак</td><td>Припремни дечији ансамбл</td><td>19–20</td></tr>
+                <tr><td>Уторак</td><td>Рекреативна група</td><td>21–22</td></tr>
+                <tr><td>Среда</td><td>Школа фолклора Уровци</td><td>19–20</td></tr>
+                <tr><td>Четвртак</td><td>Млађа група деце</td><td>18–19</td></tr>
+                <tr><td>Четвртак</td><td>Школа фолклора Грабовац</td><td>19–20</td></tr>
+                <tr><td>Четвртак</td><td>Дечији ансамбл</td><td>20–21</td></tr>
+                <tr><td>Четвртак</td><td>Извођачки ансамбл</td><td>21–22</td></tr>
+              </tbody>
+            </table>
+            <div class="warn-note">⚠ Термини за Народни оркестар и Ветеране — потврдити пре објаве</div>
+          </div>
+
+          <div class="info-box">
+            <strong>Шта треба да знате:</strong><br>
+            ✓ Претходно искуство није потребно за почетне групе<br>
+            ✓ Групе се формирају према узрасту и нивоу знања<br>
+            ✓ Редовност на пробама је важна за напредак<br>
+            ✓ Родитељи ће бити благовремено обавештавани о наступима<br>
+            ✓ КУД развија дисциплину, тимски дух и однос према традицији
+          </div>
+        </div>
+
+        <!-- DESNO: forma -->
+        <div class="forma-wrap">
+          <h3>Пошаљите пријаву</h3>
+          <p class="sub">Попуните кратку пријаву, а контакт особа КУД-а ће вас обавестити о групи, термину пробе и начину укључивања у рад.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="TVOJ-KLJUC-OVDE">
+            <input type="hidden" name="subject" value="КУД ТЕНТ — Нова пријава за упис">
+            <input type="hidden" name="redirect" value="https://kudtent.rs/upis.html?sent=1">
+            <input type="checkbox" name="botcheck" style="display:none">
+            <div class="forma-grid">
+              <div class="form-group full">
+                <label class="form-label" for="kandidat">Ime i prezime kandidata *</label>
+                <input class="form-input" type="text" id="kandidat" name="kandidat" placeholder="Нпр. Марко Петровић" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="godina">Godina rođenja *</label>
+                <input class="form-input" type="number" id="godina" name="godina" placeholder="нпр. 2015" min="1940" max="2025" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="roditelj">Ime roditelja/staratelja *</label>
+                <input class="form-input" type="text" id="roditelj" name="roditelj" placeholder="За малолетне кандидате" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="telefon">Kontakt telefon *</label>
+                <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="+381 6X XXX XXXX" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Imejl adresa</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="Пожељно">
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="sekcija">Sekcija koja interesuje *</label>
+                <select class="form-select" id="sekcija" name="sekcija" required>
+                  <option value="">— Izaberi grupu —</option>
+                  <option>Школа фолклора – млађа група</option>
+                  <option>Школа фолклора – старија група</option>
+                  <option>Припремни дечији ансамбл</option>
+                  <option>Дечији ансамбл</option>
+                  <option>Омладински ансамбл</option>
+                  <option>Извођачки ансамбл</option>
+                  <option>Народни оркестар</option>
+                  <option>Ветерани</option>
+                  <option>Рекреативна група</option>
+                  <option>Нисам сигуран/на — потребан савет</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="iskustvo">Prethodno iskustvo (opciono)</label>
+                <input class="form-input" type="text" id="iskustvo" name="iskustvo" placeholder="нпр. 2 године фолклора у школи">
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="napomena">Napomena (opciono)</label>
+                <textarea class="form-textarea" id="napomena" name="napomena" placeholder="Питања, напомене, посебни захтеви..." style="min-height:80px;"></textarea>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="saglasnost" name="saglasnost" value="da" required>
+              <label for="saglasnost">Сагласан/на сам да КУД „ТЕНТ" обради моје личне податке у сврху уписа у складу са <a href="privatnost.html">Политиком приватности</a>. *</label>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Пошаљи пријаву →</button>
+            <div id="success" style="display:none; background:#E6F0E4; border:1px solid #3B5C35; border-radius:8px; padding:14px 16px; color:#3B5C35; margin-top:16px; font-size:14px;">
+              ✓ Хвала! Ваша пријава је успешно послата. Контакт особа КУД-а ће вас обавестити у најкраћем року.
+            </div>
+          </form>
+          <script>if(location.search.includes('sent=1'))document.getElementById('success').style.display='block';</script>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__logo">КУД „ТЕНТ" Обреновац</div>
+        <p>Основано 27. новембра 1979.</p>
+      </div>
+      <div>
+        <h4>Навигација</h4>
+        <ul>
+          <li><a href="index.html">Насловна</a></li>
+          <li><a href="o-nama.html">О нама</a></li>
+          <li><a href="sekcije.html">Секције</a></li>
+          <li><a href="upis.html">Упис</a></li>
+          <li><a href="kontakt.html">Контакт</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <ul>
+          <li>Vojvode Mišića br. 226</li>
+          <li>11500 Обреновац</li>
+          <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
+          <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© КУД „ТЕНТ" Обреновац</span>
+      <div style="display:flex;gap:16px;"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
+    </div>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <span>Овај сајт користи колачиће. <a href="privatnost.html">Политика приватности</a>.</span>
+  <button class="btn btn--ghost btn--sm" onclick="document.getElementById('cookieBanner').classList.add('hidden');localStorage.setItem('cookies_ok','1')">Прихватам</button>
+</div>
+<script>if(localStorage.getItem('cookies_ok'))document.getElementById('cookieBanner').classList.add('hidden');</script>
+</body>
+</html>

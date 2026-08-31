@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Секције — КУД „ТЕНТ" Обреновац</title>
+<meta name="description" content="Пет секција КУД ТЕНТ: Народни оркестар, Школа фолклора, Извођачки ансамбл, Ветерани и Рекреативна група.">
+<link rel="stylesheet" href="style.css">
+<style>
+.sekcije-hero {
+  background: var(--cream);
+  border-bottom: 1px solid var(--cream-dark);
+  padding: 40px 0 32px;
+  text-align: center;
+}
+.sekcije-hero h1 { margin-bottom: 20px; }
+.sekcije-hero .pills { justify-content: center; }
+
+.sekcija-blok + .sekcija-blok { margin-top: 24px; }
+
+.sekcija-blok__inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+}
+@media (max-width: 768px) {
+  .sekcija-blok__inner { grid-template-columns: 1fr; }
+}
+
+/* alternating layout */
+.sekcija-blok:nth-child(even) .sekcija-blok__inner {
+  grid-template-columns: 1fr 340px;
+}
+.sekcija-blok:nth-child(even) .sekcija-blok__img {
+  order: 2;
+}
+.sekcija-blok:nth-child(even) .sekcija-blok__content {
+  order: 1;
+}
+@media (max-width: 768px) {
+  .sekcija-blok:nth-child(even) .sekcija-blok__inner { grid-template-columns: 1fr; }
+  .sekcija-blok:nth-child(even) .sekcija-blok__img { order: 0; }
+  .sekcija-blok:nth-child(even) .sekcija-blok__content { order: 0; }
+}
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--stone);
+  background: var(--cream);
+  border: 0.5px solid var(--cream-dark);
+  border-radius: 5px;
+  padding: 3px 9px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.meta-badge strong { color: var(--charcoal); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__name">КУД „ТЕНТ"</span>
+      <span class="site-logo__sub">Обреновац · од 1979.</span>
+    </a>
+    <button class="nav-toggle" aria-label="Meni" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="index.html">Насловна</a></li>
+        <li><a href="o-nama.html">О нама</a></li>
+        <li><a href="sekcije.html" class="active">Секције</a></li>
+        <li><a href="upis.html">Упис</a></li>
+        <li><a href="kontakt.html">Контакт</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO SA PILLOVIMA -->
+  <div class="sekcije-hero">
+    <div class="container">
+      <span class="section-label" style="display:block;margin-bottom:8px;">КУД „ТЕНТ" Обреновац</span>
+      <h1>КУД „ТЕНТ" обједињује пет секција</h1>
+      <p style="color:var(--stone);font-size:15px;margin-bottom:20px;">Кликните на назив секције да прочитате детаљнији опис.</p>
+      <div class="pills">
+        <a href="#narodni-orkestar" class="pill">Народни оркестар</a>
+        <a href="#skola-folklora" class="pill">Школа фолклора</a>
+        <a href="#izvodjacki-ansambl" class="pill">Извођачки ансамбл</a>
+        <a href="#veterani" class="pill">Ветерани</a>
+        <a href="#rekreativna-grupa" class="pill">Рекреативна група</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEKCIJE -->
+  <section class="section">
+    <div class="container">
+
+      <!-- 1. NARODNI ORKESTAR -->
+      <div class="sekcija-blok" id="narodni-orkestar">
+        <div class="sekcija-blok__inner">
+          <div class="sekcija-blok__img">
+            [ Фото — оркестар на проби или наступу · 640×420 px ]
+          </div>
+          <div class="sekcija-blok__content">
+            <span class="section-label">Секција 1</span>
+            <h3>Народни оркестар</h3>
+            <div style="margin-bottom:14px;">
+              <span class="meta-badge"><strong>Руководилац:</strong> унети</span>
+              <span class="meta-badge"><strong>Термин:</strong> потврдити пре објаве</span>
+            </div>
+            <p>Народни оркестар је музичка основа сценског наступа КУД-а. Кроз живу музику прати играчке ансамбле, подржава сценску атмосферу и доприноси аутентичности програма.</p>
+            <p>Народни оркестар има важну улогу у очувању музичке традиције и сценском представљању КУД-а. Сарадња између играча, руководилаца и оркестра од великог је значаја за квалитет наступа и целокупан утисак који КУД оставља пред публиком.</p>
+            <div class="sekcija-blok__actions">
+              <a href="upis.html" class="btn btn--primary btn--sm">Пријави се</a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament ornament--sm"></div>
+
+      <!-- 2. SKOLA FOLKLORA -->
+      <div class="sekcija-blok" id="skola-folklora">
+        <div class="sekcija-blok__inner">
+          <div class="sekcija-blok__img">
+            [ Фото — деца у ношњи или на проби · 640×420 px ]
+          </div>
+          <div class="sekcija-blok__content">
+            <span class="section-label">Секција 2</span>
+            <h3>Школа фолклора</h3>
+            <div style="margin-bottom:14px;">
+              <span class="meta-badge"><strong>Млађа група:</strong> Чет 18:00–19:00</span>
+              <span class="meta-badge"><strong>Старија група:</strong> Уто 18:00–19:00</span>
+            </div>
+            <p>Школа фолклора је основа рада КУД-а и први корак деце у свет народне игре, ритма, сценског понашања и рада у групи.</p>
+            <p>Кроз пробе деца уче основне кораке, држање, координацију, однос према музици и наступу, али и важне вредности као што су дисциплина, поштовање, стрпљење и припадност групи.</p>
+            <div class="sekcija-blok__actions">
+              <a href="upis.html" class="btn btn--primary btn--sm">Упиши дете</a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament ornament--sm"></div>
+
+      <!-- 3. IZVODJACKI ANSAMBL -->
+      <div class="sekcija-blok" id="izvodjacki-ansambl">
+        <div class="sekcija-blok__inner">
+          <div class="sekcija-blok__img">
+            [ Фото — ансамбл на сцени · 640×420 px ]
+          </div>
+          <div class="sekcija-blok__content">
+            <span class="section-label">Секција 3</span>
+            <h3>Извођачки ансамбл</h3>
+            <div style="margin-bottom:14px;">
+              <span class="meta-badge"><strong>Термин:</strong> Чет 21:00–22:00</span>
+              <span class="meta-badge"><strong>Услов:</strong> Претходно искуство</span>
+            </div>
+            <p>Извођачки ансамбл представља носећи сценски сегмент КУД-а. У њему се окупљају чланови спремни за сложенији сценски израз, захтевније кореографије и озбиљнију одговорност prema наступу.</p>
+            <p>Рад ансамбла обухвата усавршавање игре, сценског држања, кондиције, синхронизације и односа према кореографији. Чланови ансамбла представљају КУД на концертима, фестивалима, манифестацијама и гостовањима.</p>
+            <div class="sekcija-blok__actions">
+              <a href="upis.html" class="btn btn--primary btn--sm">Прикључи се</a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament ornament--sm"></div>
+
+      <!-- 4. VETERANI -->
+      <div class="sekcija-blok" id="veterani">
+        <div class="sekcija-blok__inner">
+          <div class="sekcija-blok__img">
+            [ Фото — ветерани, дружење или наступ · 640×420 px ]
+          </div>
+          <div class="sekcija-blok__content">
+            <span class="section-label">Секција 4</span>
+            <h3>Ветерани</h3>
+            <div style="margin-bottom:14px;">
+              <span class="meta-badge"><strong>Термин:</strong> потврдити пре објаве</span>
+            </div>
+            <p>Ветерани чувају континуитет, искуство и дух друштва. Ова секција повезује генерације и показује да фолклор није ограничен само на млађе узрасте.</p>
+            <p>Ветерани показују да фолклор има простор за различите генерације и да се љубав према традицији може неговати кроз сценски рад, рекреацију, дружење и очување веза међу члановима.</p>
+            <div class="sekcija-blok__actions">
+              <a href="upis.html" class="btn btn--primary btn--sm">Прикључи се</a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament ornament--sm"></div>
+
+      <!-- 5. REKREATIVNA GRUPA -->
+      <div class="sekcija-blok" id="rekreativna-grupa">
+        <div class="sekcija-blok__inner">
+          <div class="sekcija-blok__img">
+            [ Фото — рекреација или одрасли на проби · 640×420 px ]
+          </div>
+          <div class="sekcija-blok__content">
+            <span class="section-label">Секција 5</span>
+            <h3>Рекреативна група</h3>
+            <div style="margin-bottom:14px;">
+              <span class="meta-badge"><strong>Термин:</strong> Уто 21:00–22:00</span>
+              <span class="meta-badge"><strong>Услов:</strong> Нема — добродошли сви</span>
+            </div>
+            <p>Рекреативна група је намењена члановима који желе да се баве фолклором кроз дружење, рекреацију, учење игара и активан однос према традицији.</p>
+            <p>Приступачна одраслима без претходног знања — довољна је жеља да се проба и упозна фолклор. Идеално за оне који нису играли раније, а желе да буду активни.</p>
+            <div class="sekcija-blok__actions">
+              <a href="upis.html" class="btn btn--primary btn--sm">Прикључи се</a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__logo">КУД „ТЕНТ" Обреновац</div>
+        <p>Основано 27. новембра 1979.</p>
+      </div>
+      <div>
+        <h4>Навигација</h4>
+        <ul>
+          <li><a href="index.html">Насловна</a></li>
+          <li><a href="o-nama.html">О нама</a></li>
+          <li><a href="sekcije.html">Секције</a></li>
+          <li><a href="upis.html">Упис</a></li>
+          <li><a href="kontakt.html">Контакт</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <ul>
+          <li>Vojvode Mišića br. 226</li>
+          <li>11500 Обреновац</li>
+          <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
+          <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© КУД „ТЕНТ" Обреновац</span>
+      <div style="display:flex;gap:16px;"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
+    </div>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <span>Овај сајт користи колачиће. <a href="privatnost.html">Политика приватности</a>.</span>
+  <button class="btn btn--ghost btn--sm" onclick="document.getElementById('cookieBanner').classList.add('hidden');localStorage.setItem('cookies_ok','1')">Прихватам</button>
+</div>
+<script>if(localStorage.getItem('cookies_ok'))document.getElementById('cookieBanner').classList.add('hidden');</script>
+</body>
+</html>
