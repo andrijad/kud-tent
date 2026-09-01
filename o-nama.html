@@ -6,73 +6,25 @@
 <title>О нама — КУД „ТЕНТ" Обреновац</title>
 <meta name="description" content="Историјат, мисија и вредности Културно-уметничког друштва ТЕНТ из Обреновца, основаног 1979. године.">
 <link rel="stylesheet" href="style.css">
-<style>
-.vrednosti-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-@media (max-width: 680px) { .vrednosti-grid { grid-template-columns: 1fr; } }
-
-.vrednost-item {
-  background: var(--warm-white);
-  border: 0.5px solid var(--cream-dark);
-  border-top: 3px solid var(--ochre-light);
-  border-radius: 8px;
-  padding: 18px 16px;
-}
-.vrednost-item h4 { font-size: 15px; margin-bottom: 6px; }
-.vrednost-item p { font-size: 13px; color: var(--stone); line-height: 1.55; margin-bottom: 0; }
-
-.podaci-card {
-  background: var(--rust-pale);
-  border: 0.5px solid var(--rust);
-  border-radius: 10px;
-  padding: 24px 28px;
-}
-.podaci-card h3 { margin-bottom: 16px; color: var(--rust); }
-.podaci-row { display: flex; gap: 10px; margin-bottom: 12px; font-size: 14px; }
-.podaci-row:last-child { margin-bottom: 0; }
-.podaci-row .key { font-weight: 600; color: var(--charcoal); min-width: 120px; flex-shrink: 0; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
-.podaci-row .val { color: var(--stone); }
-
-.istorijat-block {
-  background: var(--warm-white);
-  border: 0.5px solid var(--cream-dark);
-  border-radius: 10px;
-  padding: 32px 36px;
-}
-@media (max-width: 680px) { .istorijat-block { padding: 20px; } }
-.istorijat-block p { font-size: 15px; color: var(--stone); }
-.istorijat-block .note {
-  background: var(--ochre-pale);
-  border-left: 3px solid var(--ochre-light);
-  border-radius: 0 6px 6px 0;
-  padding: 10px 14px;
-  font-size: 13px;
-  color: var(--stone);
-  margin-top: 16px;
-  font-style: italic;
-}
-</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-logo">
-      <span class="site-logo__name">КУД „ТЕНТ"</span>
+      <span class="site-logo__kud">КУД</span>
+      <span class="site-logo__name">„ТЕНТ"</span>
       <span class="site-logo__sub">Обреновац · од 1979.</span>
     </a>
-    <button class="nav-toggle" aria-label="Meni" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
-    <nav>
+    <button class="nav-toggle" aria-label="Отвори мени" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav aria-label="Главна навигација">
       <ul class="site-nav">
         <li><a href="index.html">Насловна</a></li>
         <li><a href="o-nama.html" class="active">О нама</a></li>
         <li><a href="sekcije.html">Секције</a></li>
         <li><a href="upis.html">Упис</a></li>
         <li><a href="kontakt.html">Контакт</a></li>
+        <li class="nav-cta"><a href="upis.html">Упиши се →</a></li>
       </ul>
     </nav>
   </div>
@@ -80,58 +32,84 @@
 
 <main>
 
+  <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container">
-      <span class="section-label" style="justify-content:center;display:flex;">КУД „ТЕНТ" Обреновац</span>
-      <h1>О нама</h1>
+      <span class="t-label">КУД „ТЕНТ" Обреновац</span>
+      <h1 class="t-h1" style="color:var(--warm-white);margin-top:var(--sp-2);">О нама</h1>
+      <p class="t-lead" style="color:var(--stone-light);margin-top:var(--sp-2);max-width:520px;">Преко четири деценије неговања народне игре, песме, музике и традиционалне културе Србије.</p>
     </div>
   </div>
 
-  <!-- O KUD-U -->
-  <section class="section">
+  <!-- KO SMO MI -->
+  <section class="section bg-warm-white">
     <div class="container">
-      <div class="grid-2" style="align-items:start;gap:32px;">
+      <div class="grid-2" style="gap:var(--sp-7);align-items:center;">
         <div>
-          <span class="section-label">Ко смо ми</span>
-          <h2 style="margin-bottom:16px;">Културно-уметничко<br>друштво „ТЕНТ"</h2>
-          <p style="font-size:15px;color:var(--stone);">Културно-уметничко друштво „Термоелектране Никола Тесла" из Обреновца основано је са циљем да негује, чува и представља народну игру, песму, музику и традиционалну културу Србије. Кроз вишедеценијски рад, КУД „ТЕНТ" је постао препознатљив део културног живота Обреновца и значајан носилац аматерског стваралаштва.</p>
-          <p style="font-size:15px;color:var(--stone);">Друштво окупља велики број чланова различитих узраста — од деце која праве прве фолклорне кораке, преко омладинских и извођачких група, до рекреативних и искуснијих чланова који својим ангажовањем доприносе раду КУД-а.</p>
-          <p style="font-size:15px;color:var(--stone);">Рад КУД-а заснива се на педагошком приступу, тимском духу и поштовању традиције. Посебна пажња посвећује се сценском наступу, правилном односу према народној ношњи, музичкој пратњи, дисциплини и изградњи осећаја припадности друштву.</p>
-        </div>
-        <div>
-          <div style="background:var(--cream-dark);border-radius:10px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--stone-light);margin-bottom:16px;">
-            [ Фотографија — група, ношња или наступ · 600×400 px ]
+          <div class="section-header">
+            <span class="t-label">Ко смо ми</span>
+            <div class="ornament--rust"></div>
+            <h2 class="t-h2">Место где традиција живи</h2>
           </div>
-          <div class="podaci-card">
-            <h3>Кључни подаци</h3>
-            <div class="podaci-row"><span class="key">Основано</span><span class="val">27. новембар 1979.</span></div>
-            <div class="podaci-row"><span class="key">Адреса</span><span class="val">Vojvode Mišića br. 226, 11500 Обреновац</span></div>
-            <div class="podaci-row"><span class="key">Председник</span><span class="val">Ненад Јованчић</span></div>
-            <div class="podaci-row"><span class="key">Секретар</span><span class="val">Огњен Васиљевић</span></div>
-            <div class="podaci-row"><span class="key">Имejл</span><span class="val"><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></span></div>
+          <p class="t-body">Културно-уметничко друштво „Термоелектране Никола Тесла" из Обреновца основано је са циљем да негује, чува и представља народну игру, песму, музику и традиционалну културу Србије. Кроз вишедеценијски рад, КУД „ТЕНТ" је постао препознатљив део културног живота Обреновца и значајан носилац аматерског стваралаштва.</p>
+          <p class="t-body">Друштво окупља велики број чланова различитих узраста — од деце која праве прве фолклорне кораке, преко омладинских и извођачких група, до рекреативних и искуснијих чланова.</p>
+          <p class="t-body">Рад КУД-а заснива се на педагошком приступу, тимском духу и поштовању традиције. Посебна пажња посвећује се сценском наступу, правилном односу према народној ношњи, музичкој пратњи и изградњи осећаја припадности друштву.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
+          <div style="background:var(--cream);border:1px solid var(--cream-dark);border-radius:var(--r-xl);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:var(--text-sm);color:var(--stone-light);">[ Фотографија — група, ношња или наступ · 600×450 px ]</div>
+          <div style="background:var(--charcoal);border-radius:var(--r-xl);padding:var(--sp-4) var(--sp-5);">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-3);text-align:center;">
+              <div>
+                <div style="font-family:Georgia,serif;font-size:var(--text-2xl);font-weight:700;color:var(--warm-white);">1979.</div>
+                <div class="t-label" style="color:var(--stone-light);margin-top:4px;">Основано</div>
+              </div>
+              <div>
+                <div style="font-family:Georgia,serif;font-size:var(--text-2xl);font-weight:700;color:var(--ochre-light);">5</div>
+                <div class="t-label" style="color:var(--stone-light);margin-top:4px;">Секција</div>
+              </div>
+              <div>
+                <div style="font-family:Georgia,serif;font-size:var(--text-2xl);font-weight:700;color:var(--rust-hover);">45+</div>
+                <div class="t-label" style="color:var(--stone-light);margin-top:4px;">Година рада</div>
+              </div>
+            </div>
+          </div>
+          <!-- Kljucni podaci -->
+          <div style="background:var(--rust-pale);border:1px solid var(--cream-dark);border-radius:var(--r-xl);padding:var(--sp-4) var(--sp-5);">
+            <div class="t-label" style="margin-bottom:var(--sp-2);color:var(--rust);">Кључни подаци</div>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+              <div style="display:flex;gap:var(--sp-2);"><span style="font-weight:600;color:var(--charcoal);min-width:110px;">Основано</span><span style="color:var(--stone);">27. новембар 1979.</span></div>
+              <div style="display:flex;gap:var(--sp-2);"><span style="font-weight:600;color:var(--charcoal);min-width:110px;">Председник</span><span style="color:var(--stone);">Ненад Јованчић</span></div>
+              <div style="display:flex;gap:var(--sp-2);"><span style="font-weight:600;color:var(--charcoal);min-width:110px;">Секретар</span><span style="color:var(--stone);">Огњен Васиљевић</span></div>
+              <div style="display:flex;gap:var(--sp-2);"><span style="font-weight:600;color:var(--charcoal);min-width:110px;">Имejл</span><span style="color:var(--stone);"><a href="mailto:kud.tent@eps.rs" style="color:var(--rust);">kud.tent@eps.rs</a></span></div>
+              <div style="display:flex;gap:var(--sp-2);"><span style="font-weight:600;color:var(--charcoal);min-width:110px;">Адреса</span><span style="color:var(--stone);">Војводе Мишића 226, Обреновац</span></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="ornament container"></div>
-
-  <!-- MISIJA / VIZIJA / VREDNOSTI -->
-  <section class="section--tight section--warm">
+  <!-- MISIJA / VIZIJA -->
+  <section class="section bg-cream">
     <div class="container">
-      <span class="section-label">Мисија, визија и вредности</span>
-      <div class="grid-2" style="gap:24px;margin-bottom:24px;">
-        <div class="istorijat-block" style="padding:24px;">
-          <h3 style="font-size:18px;margin-bottom:10px;">Мисија</h3>
-          <p style="font-size:15px;color:var(--stone);">Очување и преношење српске традиције новим генерацијама кроз игру, песму, музику, сценски наступ и културно образовање.</p>
+      <div class="section-header section-header--center">
+        <span class="t-label">Мисија, визија и вредности</span>
+        <div class="ornament--rust" style="margin:var(--sp-2) auto;"></div>
+        <h2 class="t-h2">Зашто постојимо</h2>
+      </div>
+      <div class="grid-2" style="gap:var(--sp-4);margin-bottom:var(--sp-5);">
+        <div style="background:var(--warm-white);border:1px solid var(--cream-dark);border-radius:var(--r-xl);padding:var(--sp-5);border-top:4px solid var(--rust);">
+          <div class="t-label" style="color:var(--rust);margin-bottom:var(--sp-2);">Мисија</div>
+          <h3 class="t-h3" style="margin-bottom:var(--sp-3);">Чување традиције за нове генерације</h3>
+          <p class="t-body">Очување и преношење српске традиције новим генерацијама кроз игру, песму, музику, сценски наступ и културно образовање.</p>
         </div>
-        <div class="istorijat-block" style="padding:24px;">
-          <h3 style="font-size:18px;margin-bottom:10px;">Визија</h3>
-          <p style="font-size:15px;color:var(--stone);">Да КУД „ТЕНТ" буде стабилно, организовано и препознатљиво друштво које окупља велики број младих и квалитетно представља Обреновац и Србију.</p>
+        <div style="background:var(--warm-white);border:1px solid var(--cream-dark);border-radius:var(--r-xl);padding:var(--sp-5);border-top:4px solid var(--ochre);">
+          <div class="t-label" style="color:var(--ochre);margin-bottom:var(--sp-2);">Визија</div>
+          <h3 class="t-h3" style="margin-bottom:var(--sp-3);">Стабилно и препознатљиво друштво</h3>
+          <p class="t-body">Да КУД „ТЕНТ" буде стабилно, организовано и препознатљиво друштво које окупља велики број младих и квалитетно представља Обреновац и Србију.</p>
         </div>
       </div>
-      <div class="vrednosti-grid">
+      <div class="grid-3" style="gap:var(--sp-3);">
         <div class="vrednost-item"><h4>Традиција</h4><p>Чување и преношење народне баштине.</p></div>
         <div class="vrednost-item"><h4>Заједништво</h4><p>Окупљање кроз заједнички циљ и припадност.</p></div>
         <div class="vrednost-item"><h4>Одговорност</h4><p>Озбиљан однос према раду и наступу.</p></div>
@@ -142,33 +120,47 @@
     </div>
   </section>
 
-  <div class="ornament container"></div>
-
   <!-- ISTORIJAT -->
-  <section class="section--tight">
-    <div class="container">
-      <span class="section-label">Историјат</span>
-      <h2 style="margin-bottom:24px;">Преко четири деценије традиције</h2>
-      <div class="istorijat-block">
-        <p>Културно-уметничко друштво „Термоелектране Никола Тесла" основано је 27. новембра 1979. године у Обреновцу. Од оснивања до данас, КУД „ТЕНТ" има важну улогу у очувању народне традиције и развоју културно-уметничког аматеризма.</p>
-        <p>Друштво је настало из потребе да се у оквиру радне и локалне заједнице створи простор за неговање фолклора, народне музике, игре и сценског стваралаштва. Временом је КУД „ТЕНТ" израстао у друштво које окупља више генерација и које својим програмима представља културни идентитет Обреновца.</p>
-        <p>Током свог рада, КУД „ТЕНТ" је наступао на бројним концертима, фестивалима, смотрама и културним манифестацијама у земљи и иностранству. Сваки наступ није само извођење кореографије, већ сценско представљање једног дела народног живота, обичаја и културе.</p>
-        <div class="note">⚠ Накнадно допунити прецизним подацима о наградама, најзначајнијим турнејама, кореографијама и руководиоцима кроз године.</div>
+  <section class="section bg-warm-white">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <span class="t-label">Историјат</span>
+        <div class="ornament--rust"></div>
+        <h2 class="t-h2">Преко четири деценије традиције</h2>
+      </div>
+      <p class="t-body">Културно-уметничко друштво „Термоелектране Никола Тесла" основано је 27. новембра 1979. године у Обреновцу. Од оснивања до данас, КУД „ТЕНТ" има важну улогу у очувању народне традиције и развоју културно-уметничког аматеризма.</p>
+      <p class="t-body">Друштво је настало из потребе да се у оквиру радне и локалне заједнице створи простор за неговање фолклора, народне музике, игре и сценског стваралаштва. Временом је КУД „ТЕНТ" израстао у друштво које окупља више генерација и које својим програмима представља културни идентитет Обреновца.</p>
+      <p class="t-body">Током свог рада, КУД „ТЕНТ" је наступао на бројним концертима, фестивалима, смотрама и културним манифестацијама у земљи и иностранству. Сваки наступ није само извођење кореографије, већ сценско представљање једног дела народног живота, обичаја и културе.</p>
+      <div class="info-box info-box--ochre mt-3">
+        !!! Накнадно допунити прецизним подацима о наградама, најзначајнијим турнејама, кореографијама и руководиоцима кроз године.
       </div>
     </div>
   </section>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <div class="cta-strip__inner">
+        <div>
+          <h2>Постаните dio наше приче</h2>
+          <p>Упис нових чланова је отворен за сва узраста.</p>
+        </div>
+        <a href="upis.html" class="btn btn--white btn--lg">Упиши се →</a>
+      </div>
+    </div>
+  </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <div class="site-footer__logo">КУД „ТЕНТ" Обреновац</div>
-        <p>Cultural-arts society<br>„Termoelektrane Nikola Tesla"<br>Основано 27. новембра 1979.</p>
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <div class="name">КУД „ТЕНТ"</div>
+        <p class="tagline">Културно-уметничко друштво<br>„Термоелектране Никола Тесла"<br>Обреновац · Основано 1979.</p>
       </div>
       <div>
-        <h4>Навигација</h4>
+        <h5>Навигација</h5>
         <ul>
           <li><a href="index.html">Насловна</a></li>
           <li><a href="o-nama.html">О нама</a></li>
@@ -178,18 +170,27 @@
         </ul>
       </div>
       <div>
-        <h4>Контакт</h4>
+        <h5>Секције</h5>
         <ul>
-          <li>Vojvode Mišića br. 226</li>
-          <li>11500 Обреновац</li>
+          <li><a href="sekcije.html#narodni-orkestar">Народни оркестар</a></li>
+          <li><a href="sekcije.html#skola-folklora">Школа фолклора</a></li>
+          <li><a href="sekcije.html#izvodjacki-ansambl">Извођачки ансамбл</a></li>
+          <li><a href="sekcije.html#veterani">Ветерани</a></li>
+          <li><a href="sekcije.html#rekreativna-grupa">Рекреативна група</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Контакт</h5>
+        <ul>
           <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
           <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
+          <li style="color:var(--stone-light);font-size:13px;">Војводе Мишића бр. 226<br>11500 Обреновац</li>
         </ul>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© КУД „ТЕНТ" Обреновац</span>
-      <div style="display:flex;gap:16px;"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
+      <span>© КУД „ТЕНТ" Обреновац · Сва права задржана</span>
+      <div style="display:flex;gap:var(--sp-3);"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
     </div>
   </div>
 </footer>
