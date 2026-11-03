@@ -1,0 +1,11 @@
+{
+  // Statički sajt KUD ТЕНТ — Cloudflare Worker sa statičkim fajlovima
+  "name": "kud-tent",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "preview_urls": true
+}
