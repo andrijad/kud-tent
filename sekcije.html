@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Секције — КУД „ТЕНТ" Обреновац</title>
+<title>Секције — КУД „ТЕНТ“ Обреновац</title>
 <meta name="description" content="Пет секција КУД ТЕНТ: Народни оркестар, Школа фолклора, Извођачки ансамбл, Ветерани и Рекреативна група.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -25,7 +25,7 @@
   text-transform: uppercase;
   color: var(--stone-light);
   white-space: nowrap;
-  font-family: -apple-system, sans-serif;
+  font-family: var(--font-sans);
 }
 </style>
 </head>
@@ -35,7 +35,7 @@
   <div class="site-header__inner">
     <a href="index.html" class="site-logo">
       <span class="site-logo__kud">КУД</span>
-      <span class="site-logo__name">„ТЕНТ"</span>
+      <span class="site-logo__name">„ТЕНТ“</span>
       <span class="site-logo__sub">Обреновац · од 1979.</span>
     </a>
     <button class="nav-toggle" aria-label="Отвори мени" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
@@ -44,6 +44,7 @@
         <li><a href="index.html">Насловна</a></li>
         <li><a href="o-nama.html">О нама</a></li>
         <li><a href="sekcije.html" class="active">Секције</a></li>
+        <li><a href="aktuelnosti.html">Актуелности</a></li>
         <li><a href="upis.html">Упис</a></li>
         <li><a href="kontakt.html">Контакт</a></li>
         <li class="nav-cta"><a href="upis.html">Упиши се →</a></li>
@@ -57,8 +58,8 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container">
-      <span class="t-label">КУД „ТЕНТ" Обреновац</span>
-      <h1 class="t-h1" style="color:var(--warm-white);margin-top:var(--sp-2);">КУД „ТЕНТ"<br>обједињује пет секција</h1>
+      <span class="t-label">КУД „ТЕНТ“ Обреновац</span>
+      <h1 class="t-h1" style="color:var(--warm-white);margin-top:var(--sp-2);">КУД „ТЕНТ“<br>обједињује пет секција</h1>
       <p class="t-lead" style="color:var(--stone-light);margin-top:var(--sp-2);">Кликните на назив секције да прочитате детаљнији опис.</p>
     </div>
   </div>
@@ -73,6 +74,7 @@
         <a href="#izvodjacki-ansambl" class="pill">03 · Извођачки ансамбл</a>
         <a href="#veterani" class="pill">04 · Ветерани</a>
         <a href="#rekreativna-grupa" class="pill">05 · Рекреативна група</a>
+        <a href="#raspored" class="pill">Распоред проба</a>
       </div>
     </div>
   </div>
@@ -88,10 +90,9 @@
           <div class="sekcija-blok__content">
             <div class="sekcija-blok__num">Секција 01</div>
             <h3 class="t-h3">Народни оркестар</h3>
-            <div class="sekcija-blok__meta">
-              <span class="meta-badge"><strong>Руководилац:</strong> унети</span>
-              <span class="meta-badge"><strong>Термин:</strong> потврдити</span>
-            </div>
+            <ul class="grupe-list">
+                <li><span class="grupe-list__name">Народни оркестар</span><span class="grupe-list__info">По договору</span><span class="grupe-list__meta">Благоје Трифуновић · Соколски дом, Обреновац</span></li>
+            </ul>
             <p>Народни оркестар је музичка основа сценског наступа КУД-а. Кроз живу музику прати играчке ансамбле, подржава сценску атмосферу и доприноси аутентичности програма.</p>
             <p>Народни оркестар има важну улогу у очувању музичке традиције и сценском представљању КУД-а. Сарадња између играча, руководилаца и оркестра од великог је значаја за квалитет наступа.</p>
             <div class="sekcija-blok__actions">
@@ -109,10 +110,14 @@
           <div class="sekcija-blok__content">
             <div class="sekcija-blok__num">Секција 02</div>
             <h3 class="t-h3">Школа фолклора</h3>
-            <div class="sekcija-blok__meta">
-              <span class="meta-badge"><strong>Млађа:</strong> Чет 18–19ч</span>
-              <span class="meta-badge"><strong>Старија:</strong> Уто 18–19ч</span>
-            </div>
+            <ul class="grupe-list">
+                <li><span class="grupe-list__name">Млађа група деце</span><span class="grupe-list__info">Понедељак и петак · 18.00–19.00</span><span class="grupe-list__meta">Катарина Лукић · Соколски дом, Обреновац</span></li>
+                <li><span class="grupe-list__name">Старија група деце</span><span class="grupe-list__info">Уторак и четвртак · 18.00–19.00</span><span class="grupe-list__meta">Алекса Бранковић · Соколски дом, Обреновац</span></li>
+                <li><span class="grupe-list__name">Припремни дечји ансамбл</span><span class="grupe-list__info">Уторак и петак · 19.00–21.00</span><span class="grupe-list__meta">Јелена Лукић · Соколски дом, Обреновац</span></li>
+                <li><span class="grupe-list__name">Дечји ансамбл</span><span class="grupe-list__info">Четвртак · 19.00–21.00<br>Недеља · 12.00–14.00</span><span class="grupe-list__meta">Анастасија Јанковић · Соколски дом, Обреновац</span></li>
+                <li><span class="grupe-list__name">Школа фолклора Грабовац</span><span class="grupe-list__info">Понедељак и петак · 13.00–15.00</span><span class="grupe-list__meta">Катарина Лукић · Грабовац</span></li>
+                <li><span class="grupe-list__name">Школа фолклора Уровци</span><span class="grupe-list__info">Уторак и петак · 18.00–19.00</span><span class="grupe-list__meta">Никола Гашић · Уровци</span></li>
+            </ul>
             <p>Школа фолклора је основа рада КУД-а и први корак деце у свет народне игре, ритма, сценског понашања и рада у групи.</p>
             <p>Кроз пробе деца уче основне кораке, држање, координацију, однос према музици и наступу, али и важне вредности — дисциплину, поштовање, стрпљење и припадност групи.</p>
             <div class="sekcija-blok__actions">
@@ -130,10 +135,10 @@
           <div class="sekcija-blok__content">
             <div class="sekcija-blok__num">Секција 03</div>
             <h3 class="t-h3">Извођачки ансамбл</h3>
-            <div class="sekcija-blok__meta">
-              <span class="meta-badge"><strong>Термин:</strong> Чет 21–22ч</span>
-              <span class="meta-badge"><strong>Услов:</strong> Претходно искуство</span>
-            </div>
+            <ul class="grupe-list">
+                <li><span class="grupe-list__name">Омладински ансамбл</span><span class="grupe-list__info">Понедељак · 19.00–21.00<br>Среда · 19.30–21.00</span><span class="grupe-list__meta">Александар Драгачевац, в. д. · Соколски дом, Обреновац</span></li>
+                <li><span class="grupe-list__name">Извођачки ансамбл</span><span class="grupe-list__info">Понедељак и четвртак · 21.00–22.00</span><span class="grupe-list__meta">Александар Драгачевац · Соколски дом, Обреновац</span></li>
+            </ul>
             <p>Извођачки ансамбл представља носећи сценски сегмент КУД-а. Окупља чланове спремне за сложенији сценски израз, захтевније кореографије и озбиљнију одговорност.</p>
             <p>Чланови ансамбла представљају КУД на концертима, фестивалима, манифестацијама и гостовањима у земљи и иностранству.</p>
             <div class="sekcija-blok__actions">
@@ -151,9 +156,9 @@
           <div class="sekcija-blok__content">
             <div class="sekcija-blok__num">Секција 04</div>
             <h3 class="t-h3">Ветерани</h3>
-            <div class="sekcija-blok__meta">
-              <span class="meta-badge"><strong>Термин:</strong> потврдити</span>
-            </div>
+            <ul class="grupe-list">
+                <li><span class="grupe-list__name">Ветерани</span><span class="grupe-list__info">Среда · 21.00–23.00</span><span class="grupe-list__meta">Катарина Ђорђевић · Соколски дом, Обреновац</span></li>
+            </ul>
             <p>Ветерани чувају континуитет, искуство и дух друштва. Ова секција повезује генерације и показује да фолклор није ограничен само на млађе узрасте.</p>
             <p>Ветерани показују да се љубав према традицији може неговати кроз сценски рад, рекреацију, дружење и очување веза међу члановима кроз деценије.</p>
             <div class="sekcija-blok__actions">
@@ -171,10 +176,9 @@
           <div class="sekcija-blok__content">
             <div class="sekcija-blok__num">Секција 05</div>
             <h3 class="t-h3">Рекреативна група</h3>
-            <div class="sekcija-blok__meta">
-              <span class="meta-badge"><strong>Термин:</strong> Уто 21–22ч</span>
-              <span class="meta-badge"><strong>Услов:</strong> Нема — добродошли сви</span>
-            </div>
+            <ul class="grupe-list">
+                <li><span class="grupe-list__name">Рекреативна група</span><span class="grupe-list__info">Уторак и петак · 21.00–23.00</span><span class="grupe-list__meta">Александар Драгачевац · Соколски дом, Обреновац</span></li>
+            </ul>
             <p>Рекреативна група је намењена члановима који желе да се баве фолклором кроз дружење, рекреацију, учење игара и активан однос према традицији.</p>
             <p>Приступачна одраслима без претходног знања — довољна је жеља да се проба и упозна фолклор. Идеално за оне који нису играли раније, а желе да буду активни.</p>
             <div class="sekcija-blok__actions">
@@ -185,6 +189,36 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- RASPORED -->
+  <section class="section--sm bg-warm-white" id="raspored" style="scroll-margin-top:90px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="t-label">Распоред</span>
+        <div class="ornament--rust"></div>
+        <h2 class="t-h2">Групе, руководиоци и термини проба</h2>
+      </div>
+          <div class="table-card raspored">
+            <div class="table-card__head"><h3>Распоред проба</h3></div>
+            <table class="upis-table raspored-table">
+              <thead><tr><th>Група</th><th>Руководилац</th><th>Узраст</th><th>Локација</th><th>Термини</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Група">Млађа група деце</td><td data-label="Руководилац">Катарина Лукић</td><td data-label="Узраст">Предшколски узраст</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак и петак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Старија група деце</td><td data-label="Руководилац">Алекса Бранковић</td><td data-label="Узраст">Млађи школски узраст</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и четвртак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Припремни дечји ансамбл</td><td data-label="Руководилац">Јелена Лукић</td><td data-label="Узраст">Деца која прелазе из почетних група</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и петак · 19.00–21.00</td></tr>
+                <tr><td data-label="Група">Дечји ансамбл</td><td data-label="Руководилац">Анастасија Јанковић</td><td data-label="Узраст">Деца са основним искуством</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Четвртак · 19.00–21.00<br>Недеља · 12.00–14.00</td></tr>
+                <tr><td data-label="Група">Омладински ансамбл</td><td data-label="Руководилац">Александар Драгачевац, в. д.</td><td data-label="Узраст">Млади, наставак рада</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак · 19.00–21.00<br>Среда · 19.30–21.00</td></tr>
+                <tr><td data-label="Група">Извођачки ансамбл</td><td data-label="Руководилац">Александар Драгачевац</td><td data-label="Узраст">Чланови са играчким искуством</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак и четвртак · 21.00–22.00</td></tr>
+                <tr><td data-label="Група">Рекреативна група</td><td data-label="Руководилац">Александар Драгачевац</td><td data-label="Узраст">Одрасли, без претходног искуства</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и петак · 21.00–23.00</td></tr>
+                <tr><td data-label="Група">Ветерани</td><td data-label="Руководилац">Катарина Ђорђевић</td><td data-label="Узраст">Искуснији чланови и бивши играчи</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Среда · 21.00–23.00</td></tr>
+                <tr><td data-label="Група">Школа фолклора Грабовац</td><td data-label="Руководилац">Катарина Лукић</td><td data-label="Узраст">Деца</td><td data-label="Локација">Грабовац</td><td data-label="Термини">Понедељак и петак · 13.00–15.00</td></tr>
+                <tr><td data-label="Група">Школа фолклора Уровци</td><td data-label="Руководилац">Никола Гашић</td><td data-label="Узраст">Деца</td><td data-label="Локација">Уровци</td><td data-label="Термини">Уторак и петак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Народни оркестар</td><td data-label="Руководилац">Благоје Трифуновић</td><td data-label="Узраст">Музичари</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">По договору</td></tr>
+              </tbody>
+            </table>
+          </div>
     </div>
   </section>
 
@@ -207,8 +241,9 @@
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__brand">
-        <div class="name">КУД „ТЕНТ"</div>
-        <p class="tagline">Основано 27. новембра 1979.</p>
+        <div class="name">КУД „ТЕНТ“</div>
+        <p class="tagline">Културно-уметничко друштво<br>„Термоелектране Никола Тесла“<br>Обреновац · Основано 1979.</p>
+        <p class="tagline">Соколски дом<br>Војводе Мишића 226, 11500 Обреновац<br><a href="tel:+381118724394">+381 11 872 4394</a> · <a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></p>
       </div>
       <div>
         <h5>Навигација</h5>
@@ -216,6 +251,7 @@
           <li><a href="index.html">Насловна</a></li>
           <li><a href="o-nama.html">О нама</a></li>
           <li><a href="sekcije.html">Секције</a></li>
+          <li><a href="aktuelnosti.html">Актуелности</a></li>
           <li><a href="upis.html">Упис</a></li>
           <li><a href="kontakt.html">Контакт</a></li>
         </ul>
@@ -223,24 +259,25 @@
       <div>
         <h5>Секције</h5>
         <ul>
-          <li><a href="#narodni-orkestar">Народни оркестар</a></li>
-          <li><a href="#skola-folklora">Школа фолклора</a></li>
-          <li><a href="#izvodjacki-ansambl">Извођачки ансамбл</a></li>
-          <li><a href="#veterani">Ветерани</a></li>
-          <li><a href="#rekreativna-grupa">Рекреативна група</a></li>
+          <li><a href="sekcije.html#narodni-orkestar">Народни оркестар</a></li>
+          <li><a href="sekcije.html#skola-folklora">Школа фолклора</a></li>
+          <li><a href="sekcije.html#izvodjacki-ansambl">Извођачки ансамбл</a></li>
+          <li><a href="sekcije.html#veterani">Ветерани</a></li>
+          <li><a href="sekcije.html#rekreativna-grupa">Рекреативна група</a></li>
         </ul>
       </div>
       <div>
-        <h5>Контакт</h5>
-        <ul>
-          <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
-          <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
-          <li style="color:var(--stone-light);font-size:13px;">Војводе Мишића бр. 226<br>11500 Обреновац</li>
+        <h5>Пратите нас</h5>
+        <ul class="footer-social-list">
+          <li><a href="https://www.instagram.com/kudtent/" target="_blank" rel="noopener">Инстаграм</a></li>
+          <li><a href="https://www.tiktok.com/@kudtent" target="_blank" rel="noopener">Тикток</a></li>
+          <li><a href="https://www.youtube.com/@KUDTENT79" target="_blank" rel="noopener">Јутјуб</a></li>
+          <li><a href="https://www.facebook.com/kudtent/?locale=sr_RS" target="_blank" rel="noopener">Фејсбук</a></li>
         </ul>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© КУД „ТЕНТ" Обреновац · Сва права задржана</span>
+      <span>© КУД „ТЕНТ“ Обреновац · Сва права задржана · <span class="site-footer__credit">by AMMD Web</span></span>
       <div style="display:flex;gap:var(--sp-3);"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
     </div>
   </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Упис — КУД „ТЕНТ" Обреновац</title>
+<title>Упис — КУД „ТЕНТ“ Обреновац</title>
 <meta name="description" content="Упис нових чланова у КУД ТЕНТ. Секције за децу, омладину и одрасле. Пошаљите пријаву онлајн.">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +13,7 @@
   <div class="site-header__inner">
     <a href="index.html" class="site-logo">
       <span class="site-logo__kud">КУД</span>
-      <span class="site-logo__name">„ТЕНТ"</span>
+      <span class="site-logo__name">„ТЕНТ“</span>
       <span class="site-logo__sub">Обреновац · од 1979.</span>
     </a>
     <button class="nav-toggle" aria-label="Отвори мени" onclick="this.closest('header').querySelector('.site-nav').classList.toggle('open')">☰</button>
@@ -22,6 +22,7 @@
         <li><a href="index.html">Насловна</a></li>
         <li><a href="o-nama.html">О нама</a></li>
         <li><a href="sekcije.html">Секције</a></li>
+        <li><a href="aktuelnosti.html">Актуелности</a></li>
         <li><a href="upis.html" class="active">Упис</a></li>
         <li><a href="kontakt.html">Контакт</a></li>
         <li class="nav-cta"><a href="upis.html">Упиши се →</a></li>
@@ -35,7 +36,7 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container">
-      <span class="t-label">КУД „ТЕНТ" Обреновац</span>
+      <span class="t-label">КУД „ТЕНТ“ Обреновац</span>
       <h1 class="t-h1" style="color:var(--warm-white);margin-top:var(--sp-2);">Упис нових чланова</h1>
       <p class="t-lead" style="color:var(--stone-light);margin-top:var(--sp-2);max-width:520px;">Позивамо децу, младе и одрасле. Претходно искуство <strong style="color:var(--warm-white);">није потребно</strong> за почетне групе.</p>
     </div>
@@ -44,47 +45,32 @@
   <!-- MAIN CONTENT -->
   <section class="section bg-cream">
     <div class="container">
+      <div id="raspored" style="margin-bottom:var(--sp-6);">
+          <div class="table-card raspored">
+            <div class="table-card__head"><h3>Групе, руководиоци и термини проба</h3></div>
+            <table class="upis-table raspored-table">
+              <thead><tr><th>Група</th><th>Руководилац</th><th>Узраст</th><th>Локација</th><th>Термини</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Група">Млађа група деце</td><td data-label="Руководилац">Катарина Лукић</td><td data-label="Узраст">Предшколски узраст</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак и петак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Старија група деце</td><td data-label="Руководилац">Алекса Бранковић</td><td data-label="Узраст">Млађи школски узраст</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и четвртак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Припремни дечји ансамбл</td><td data-label="Руководилац">Јелена Лукић</td><td data-label="Узраст">Деца која прелазе из почетних група</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и петак · 19.00–21.00</td></tr>
+                <tr><td data-label="Група">Дечји ансамбл</td><td data-label="Руководилац">Анастасија Јанковић</td><td data-label="Узраст">Деца са основним искуством</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Четвртак · 19.00–21.00<br>Недеља · 12.00–14.00</td></tr>
+                <tr><td data-label="Група">Омладински ансамбл</td><td data-label="Руководилац">Александар Драгачевац, в. д.</td><td data-label="Узраст">Млади, наставак рада</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак · 19.00–21.00<br>Среда · 19.30–21.00</td></tr>
+                <tr><td data-label="Група">Извођачки ансамбл</td><td data-label="Руководилац">Александар Драгачевац</td><td data-label="Узраст">Чланови са играчким искуством</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Понедељак и четвртак · 21.00–22.00</td></tr>
+                <tr><td data-label="Група">Рекреативна група</td><td data-label="Руководилац">Александар Драгачевац</td><td data-label="Узраст">Одрасли, без претходног искуства</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Уторак и петак · 21.00–23.00</td></tr>
+                <tr><td data-label="Група">Ветерани</td><td data-label="Руководилац">Катарина Ђорђевић</td><td data-label="Узраст">Искуснији чланови и бивши играчи</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">Среда · 21.00–23.00</td></tr>
+                <tr><td data-label="Група">Школа фолклора Грабовац</td><td data-label="Руководилац">Катарина Лукић</td><td data-label="Узраст">Деца</td><td data-label="Локација">Грабовац</td><td data-label="Термини">Понедељак и петак · 13.00–15.00</td></tr>
+                <tr><td data-label="Група">Школа фолклора Уровци</td><td data-label="Руководилац">Никола Гашић</td><td data-label="Узраст">Деца</td><td data-label="Локација">Уровци</td><td data-label="Термини">Уторак и петак · 18.00–19.00</td></tr>
+                <tr><td data-label="Група">Народни оркестар</td><td data-label="Руководилац">Благоје Трифуновић</td><td data-label="Узраст">Музичари</td><td data-label="Локација">Соколски дом, Обреновац</td><td data-label="Термини">По договору</td></tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+
       <div class="grid-2" style="gap:var(--sp-6);align-items:start;">
 
-        <!-- LEVO: tabele + info -->
+        <!-- LEVO: info -->
         <div style="display:flex;flex-direction:column;gap:var(--sp-4);">
-
-          <div class="table-card">
-            <div class="table-card__head"><h3>Групе за упис</h3></div>
-            <table class="upis-table">
-              <thead><tr><th>Група / секција</th><th>Намена</th></tr></thead>
-              <tbody>
-                <tr><td>Школа фолклора – млађа</td><td>Деца предшколског узраста</td></tr>
-                <tr><td>Школа фолклора – старија</td><td>Деца школског узраста</td></tr>
-                <tr><td>Припремни дечији ансамбл</td><td>Прелаз из почетних група</td></tr>
-                <tr><td>Дечији ансамбл</td><td>Деца са основним искуством</td></tr>
-                <tr><td>Омладински ансамбл</td><td>Млади — наставак рада</td></tr>
-                <tr><td>Извођачки ансамбл</td><td>Са играчким искуством</td></tr>
-                <tr><td>Народни оркестар</td><td>Музичари</td></tr>
-                <tr><td>Ветерани</td><td>Искуснији чланови</td></tr>
-                <tr><td>Рекреативна група</td><td>Одрасли — рекреативно</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="table-card">
-            <div class="table-card__head"><h3>Термини проба</h3></div>
-            <table class="upis-table">
-              <thead><tr><th>Дан</th><th>Група</th><th>Вр.</th></tr></thead>
-              <tbody>
-                <tr><td>Понедељак</td><td>Омладински ансамбл</td><td>19–20</td></tr>
-                <tr><td>Уторак</td><td>Старија група деце</td><td>18–19</td></tr>
-                <tr><td>Уторак</td><td>Припремни дечији ансамбл</td><td>19–20</td></tr>
-                <tr><td>Уторак</td><td>Рекреативна група</td><td>21–22</td></tr>
-                <tr><td>Среда</td><td>Школа фолклора Уровци</td><td>19–20</td></tr>
-                <tr><td>Четвртак</td><td>Млађа група деце</td><td>18–19</td></tr>
-                <tr><td>Четвртак</td><td>Школа фолклора Грабовац</td><td>19–20</td></tr>
-                <tr><td>Четвртак</td><td>Дечији ансамбл</td><td>20–21</td></tr>
-                <tr><td>Четвртак</td><td>Извођачки ансамбл</td><td>21–22</td></tr>
-              </tbody>
-            </table>
-            <div class="table-note">⚠ Термини за Народни оркестар и Ветеране — потврдити пре објаве</div>
-          </div>
 
           <div class="info-box info-box--forest">
             <strong>Шта треба да знате:</strong><br>
@@ -104,6 +90,7 @@
             <p>Попуните кратку пријаву, а контакт особа КУД-а ће вас обавестити о групи и термину пробе.</p>
           </div>
           <div class="forma-wrap__body">
+            <p class="form-intro">Упис нових чланова је отворен. Изаберите групу која вас интересује и пошаљите кратку пријаву. Ако нисте сигурни која група одговара вама или вашем детету, јавите нам се — помоћи ћемо вам да направите први корак.</p>
             <form action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="TVOJ-KLJUC-OVDE">
               <input type="hidden" name="subject" value="КУД ТЕНТ — Нова пријава за упис">
@@ -135,17 +122,32 @@
                   <label class="form-label" for="sekcija">Секција која ме интересује <span class="req">*</span></label>
                   <select class="form-select" id="sekcija" name="sekcija" required>
                     <option value="">— Изабери групу —</option>
-                    <option>Школа фолклора – млађа група</option>
-                    <option>Школа фолклора – старија група</option>
-                    <option>Припремни дечији ансамбл</option>
-                    <option>Дечији ансамбл</option>
+                    <option>Млађа група деце</option>
+                    <option>Старија група деце</option>
+                    <option>Припремни дечји ансамбл</option>
+                    <option>Дечји ансамбл</option>
                     <option>Омладински ансамбл</option>
                     <option>Извођачки ансамбл</option>
-                    <option>Народни оркестар</option>
-                    <option>Ветерани</option>
                     <option>Рекреативна група</option>
+                    <option>Ветерани</option>
+                    <option>Школа фолклора Грабовац</option>
+                    <option>Школа фолклора Уровци</option>
+                    <option>Народни оркестар</option>
                     <option>Нисам сигуран/на — потребан савет</option>
                   </select>
+                </div>
+                <div class="form-group form-full">
+                  <label class="form-label" for="lokacija">Локација <span class="req">*</span></label>
+                  <select class="form-select" id="lokacija" name="lokacija" required>
+                    <option value="">— Изабери локацију —</option>
+                    <option>Соколски дом, Обреновац</option>
+                    <option>Уровци</option>
+                    <option>Грабовац</option>
+                  </select>
+                </div>
+                <div class="form-group form-full is-hidden" id="instrumentGroup">
+                  <label class="form-label" for="instrument">На ком инструменту свирате? <span class="req">*</span></label>
+                  <input class="form-input" type="text" id="instrument" name="instrument" placeholder="Нпр. хармоника, тамбура, фрула, виолина...">
                 </div>
                 <div class="form-group form-full">
                   <label class="form-label" for="napomena">Напомена (опционо)</label>
@@ -155,7 +157,7 @@
 
               <div class="form-check">
                 <input type="checkbox" id="saglasnost" name="saglasnost" value="da" required>
-                <label for="saglasnost">Сагласан/на сам да КУД „ТЕНТ" обради моје личне податке у сврху уписа у складу са <a href="privatnost.html">Политиком приватности</a>. <span class="req">*</span></label>
+                <label for="saglasnost">Сагласан/на сам да КУД „ТЕНТ“ обради моје личне податке у сврху уписа у складу са <a href="privatnost.html">Политиком приватности</a>. <span class="req">*</span></label>
               </div>
 
               <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Пошаљи пријаву →</button>
@@ -177,8 +179,9 @@
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__brand">
-        <div class="name">КУД „ТЕНТ"</div>
-        <p class="tagline">Основано 27. новембра 1979.</p>
+        <div class="name">КУД „ТЕНТ“</div>
+        <p class="tagline">Културно-уметничко друштво<br>„Термоелектране Никола Тесла“<br>Обреновац · Основано 1979.</p>
+        <p class="tagline">Соколски дом<br>Војводе Мишића 226, 11500 Обреновац<br><a href="tel:+381118724394">+381 11 872 4394</a> · <a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></p>
       </div>
       <div>
         <h5>Навигација</h5>
@@ -186,6 +189,7 @@
           <li><a href="index.html">Насловна</a></li>
           <li><a href="o-nama.html">О нама</a></li>
           <li><a href="sekcije.html">Секције</a></li>
+          <li><a href="aktuelnosti.html">Актуелности</a></li>
           <li><a href="upis.html">Упис</a></li>
           <li><a href="kontakt.html">Контакт</a></li>
         </ul>
@@ -201,16 +205,17 @@
         </ul>
       </div>
       <div>
-        <h5>Контакт</h5>
-        <ul>
-          <li><a href="mailto:kud.tent@eps.rs">kud.tent@eps.rs</a></li>
-          <li><a href="tel:+381612850712">+381 61 285 0712</a></li>
-          <li style="color:var(--stone-light);font-size:13px;">Војводе Мишића бр. 226<br>11500 Обреновац</li>
+        <h5>Пратите нас</h5>
+        <ul class="footer-social-list">
+          <li><a href="https://www.instagram.com/kudtent/" target="_blank" rel="noopener">Инстаграм</a></li>
+          <li><a href="https://www.tiktok.com/@kudtent" target="_blank" rel="noopener">Тикток</a></li>
+          <li><a href="https://www.youtube.com/@KUDTENT79" target="_blank" rel="noopener">Јутјуб</a></li>
+          <li><a href="https://www.facebook.com/kudtent/?locale=sr_RS" target="_blank" rel="noopener">Фејсбук</a></li>
         </ul>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© КУД „ТЕНТ" Обреновац · Сва права задржана</span>
+      <span>© КУД „ТЕНТ“ Обреновац · Сва права задржана · <span class="site-footer__credit">by AMMD Web</span></span>
       <div style="display:flex;gap:var(--sp-3);"><a href="uslovi.html">Услови коришћења</a><a href="privatnost.html">Политика приватности</a></div>
     </div>
   </div>
@@ -222,6 +227,12 @@
 <script>
   if(localStorage.getItem('cookies_ok'))document.getElementById('cookieBanner').classList.add('hidden');
   if(location.search.includes('sent=1'))document.getElementById('success').style.display='block';
+  document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+location.pathname+'?sent=1';});
+  (function(){var sel=document.getElementById('sekcija'),g=document.getElementById('instrumentGroup'),inp=document.getElementById('instrument');
+    function upd(){var on=sel.value==='Народни оркестар';g.classList.toggle('is-hidden',!on);inp.required=on;if(!on)inp.value='';}
+    sel.addEventListener('change',upd);upd();
+    var loc=document.getElementById('lokacija');
+    sel.addEventListener('change',function(){if(/Грабовац$/.test(sel.value))loc.value='Грабовац';else if(/Уровци$/.test(sel.value))loc.value='Уровци';});})();
 </script>
 </body>
 </html>
