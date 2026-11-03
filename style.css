@@ -1047,3 +1047,37 @@ strong { color: var(--charcoal); font-weight: 600; }
 .form-intro { font-size: 15px; color: var(--stone); line-height: 1.65; margin-bottom: var(--sp-4); }
 .is-hidden { display: none; }
 .kontakt-info .upis-table td a, .table-card .upis-table td a { color: var(--rust); text-decoration: none; white-space: nowrap; }
+
+/* ============================================================
+   RASPORED (Upis + Sekcije), LISTA GRUPA, AKTUELNOSTI
+   ============================================================ */
+.raspored-table td:last-child { white-space: nowrap; }
+@media (max-width: 760px) {
+  .raspored-table thead { display: none; }
+  .raspored-table, .raspored-table tbody, .raspored-table tr, .raspored-table td { display: block; width: 100%; }
+  .raspored-table tr { padding: var(--sp-2) var(--sp-3); border-bottom: 1px solid var(--cream-dark); }
+  .raspored-table tr:last-child { border-bottom: none; }
+  .raspored-table td { border: none; padding: 3px 0; display: flex; gap: var(--sp-2); white-space: normal !important; }
+  .raspored-table td::before { content: attr(data-label); flex: 0 0 100px; font-size: var(--text-xs); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--stone-light); padding-top: 2px; }
+  .raspored-table td:first-child { font-family: Georgia, serif; font-size: 16px; padding-bottom: 6px; }
+  .raspored-table td:first-child::before { display: none; }
+}
+
+.grupe-list { list-style: none; margin: var(--sp-3) 0; display: flex; flex-direction: column; gap: 10px; }
+.grupe-list li { background: var(--cream); border: 1px solid var(--cream-dark); border-left: 3px solid var(--ochre-light); border-radius: var(--r-md); padding: 10px 14px; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; }
+.grupe-list__name { font-weight: 600; color: var(--charcoal); font-size: 15px; }
+.grupe-list__info { font-size: 13px; color: var(--rust); text-align: right; font-weight: 600; }
+.grupe-list__meta { grid-column: 1 / -1; font-size: 13px; color: var(--stone-light); }
+@media (max-width: 480px) { .grupe-list li { grid-template-columns: 1fr; } .grupe-list__info { text-align: left; } }
+
+.vest-card { background: var(--cream); border: 1px solid var(--cream-dark); border-radius: var(--r-lg); overflow: hidden; display: flex; flex-direction: column; }
+.vest-card__img { aspect-ratio: 3/2; background: var(--cream-dark); display: flex; align-items: center; justify-content: center; font-size: var(--text-sm); color: var(--stone-light); text-align: center; padding: var(--sp-2); }
+.vest-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vest-card__body { padding: var(--sp-3) var(--sp-3) var(--sp-4); display: flex; flex-direction: column; flex: 1; }
+.vest-card__date { font-size: var(--text-xs); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ochre); margin-bottom: var(--sp-1); }
+.vest-card__title { font-size: var(--text-md); margin-bottom: var(--sp-1); line-height: 1.25; }
+.vest-card__excerpt, .vest-card__full p { font-size: 15px; color: var(--stone); line-height: 1.65; }
+.vest-card__full { margin-top: var(--sp-2); padding-top: var(--sp-2); border-top: 1px solid var(--cream-dark); }
+.vest-card__full p { margin-bottom: .8em; }
+.vest-card__toggle { margin-top: auto; align-self: flex-start; background: none; border: none; padding: var(--sp-2) 0 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--rust); cursor: pointer; }
+.vest-card__toggle:hover { color: var(--rust-hover); text-decoration: underline; }

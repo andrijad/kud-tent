@@ -157,6 +157,50 @@
     </div>
   </section>
 
+  <!-- ═══ AKTUELNOSTI ═══════════════════════════════════════ -->
+  <!-- Privremene vesti: zameniti pravim sadržajem -->
+  <section class="section bg-warm-white" id="aktuelnosti">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="t-label">Актуелности</span>
+        <div class="ornament--rust" style="margin:var(--sp-2) auto;"></div>
+        <h2 class="t-h2">Шта је ново у КУД-у</h2>
+      </div>
+      <div class="grid-3" style="align-items:start;">
+        <article class="vest-card">
+          <div class="vest-card__img">[ Фотографија вести · 640×420 px ]</div>
+          <div class="vest-card__body">
+            <span class="vest-card__date">Новембар 2026</span>
+            <h3 class="vest-card__title">Почео је упис за нову сезону</h3>
+            <p class="vest-card__excerpt">Позивамо децу, младе и одрасле да се придруже групама КУД-а ТЕНТ. Пријаве су отворене за све узрасте.</p>
+            <div class="vest-card__full" id="vest-1" hidden><p>Упис нових чланова је у току. Деца могу да почну од млађе или старије групе, а млади и одрасли имају своје ансамбле и рекреативну групу. За почетне групе претходно искуство није потребно.</p><p>Пријаву можете послати преко сајта, а контакт особа КУД-а ће вам јавити термин прве пробе. Ако нисте сигурни која група одговара вама или вашем детету, радо ћемо помоћи.</p></div>
+            <button type="button" class="vest-card__toggle" aria-expanded="false" aria-controls="vest-1">Прочитај више</button>
+          </div>
+        </article>
+        <article class="vest-card">
+          <div class="vest-card__img">[ Фотографија вести · 640×420 px ]</div>
+          <div class="vest-card__body">
+            <span class="vest-card__date">Октобар 2026</span>
+            <h3 class="vest-card__title">Припреме за годишњи концерт</h3>
+            <p class="vest-card__excerpt">Све секције друштва вредно вежбају за годишњи концерт на коме ће публици представити нове кореографије.</p>
+            <div class="vest-card__full" id="vest-2" hidden><p>Ансамбли, народни оркестар и најмлађи чланови већ неколико недеља припремају програм годишњег концерта. Публика ће видети игре из различитих крајева Србије, уз живу музику народног оркестра.</p><p>Датум и место концерта биће објављени накнадно на сајту и друштвеним мрежама КУД-а.</p></div>
+            <button type="button" class="vest-card__toggle" aria-expanded="false" aria-controls="vest-2">Прочитај више</button>
+          </div>
+        </article>
+        <article class="vest-card">
+          <div class="vest-card__img">[ Фотографија вести · 640×420 px ]</div>
+          <div class="vest-card__body">
+            <span class="vest-card__date">Септембар 2026</span>
+            <h3 class="vest-card__title">Нова сезона проба</h3>
+            <p class="vest-card__excerpt">Пробе свих група почеле су по новом распореду. Термини су доступни на страници Упис.</p>
+            <div class="vest-card__full" id="vest-3" hidden><p>Са почетком јесени све групе су наставиле рад по новом распореду проба. Руководиоци група очекују и нове чланове, па је ово добар тренутак за први долазак.</p><p>Комплетан распоред, са руководиоцима и локацијама, налази се на страници Упис.</p></div>
+            <button type="button" class="vest-card__toggle" aria-expanded="false" aria-controls="vest-3">Прочитај више</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ CTA STRIP ══════════════════════════════════════════ -->
   <div class="cta-strip">
     <div class="container">
@@ -275,5 +319,10 @@
   <button class="btn btn--ghost btn--sm" onclick="document.getElementById('cookieBanner').classList.add('hidden');localStorage.setItem('cookies_ok','1')">Прихватам</button>
 </div>
 <script>if(localStorage.getItem('cookies_ok'))document.getElementById('cookieBanner').classList.add('hidden');</script>
+<script>
+document.querySelectorAll('.vest-card__toggle').forEach(function(b){b.addEventListener('click',function(){
+  var p=document.getElementById(b.getAttribute('aria-controls')),open=b.getAttribute('aria-expanded')==='true';
+  p.hidden=open;b.setAttribute('aria-expanded',String(!open));b.textContent=open?'Прочитај више':'Затвори';});});
+</script>
 </body>
 </html>
